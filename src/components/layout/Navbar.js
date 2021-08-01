@@ -33,11 +33,11 @@ const Navbar = (props) => {
               <div className='collapse navbar-collapse' id='navbarToggler'>
                 {userContext.userType === 'Employee' ? (
                   <ul className='navbar-nav'>
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                       <Link className='nav-link' to='/'>
                         About
                       </Link>
-                    </li>
+                    </li> */}
                     <li className='nav-item'>
                       <Link className='nav-link' to='/desktop'>
                         Desktop
@@ -61,11 +61,11 @@ const Navbar = (props) => {
                   </ul>
                 ) : (
                   <ul className='navbar-nav'>
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'>
                       <Link className='nav-link' to='/'>
                         About
                       </Link>
-                    </li>
+                    </li> */}
                     <li className='nav-item'>
                       <Link className='nav-link' to='/dashboard'>
                         Dashboard
@@ -94,11 +94,11 @@ const Navbar = (props) => {
               <h3 className='align-middle d-inline'>Screen Master</h3>{' '}
             </div>
             <ul className='navbar-nav'>
-              <li className='nav-item'>
+              {/* <li className='nav-item'>
                 <Link className='nav-link' to='/'>
                   About
-                </Link>
-              </li>
+                </Link> */}
+              {/* </li> */}
             </ul>
             <ul className='navbar-nav ml-auto'>
               <li className='nav-item'>

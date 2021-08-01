@@ -18,7 +18,7 @@ const Login = (props) => {
     e.preventDefault();
     const result = userContext.login(userName, password);
     if (result) {
-      props.history.push('/');
+      props.history.push('/desktop');
     } else {
       alertContext.setAlert('Wrong Credentials', 'danger');
     }

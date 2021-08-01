@@ -13,56 +13,121 @@ const Desktop = (props) => {
   const relaxOnClick = () => props.history.push('./relaxapp');
 
   const emailOnClick = () => props.history.push('./emailapp');
+
+  const adminOnClick = () => props.history.push('./dashboard');
   return (
     <div className='container'>
       <div className='card border-0'>
         <div className='card-body'>
-          <div className='row'>
-            <div className='col-8'>
-              <h2 className='mb-3'>Welcome to your workplace, {userName}!</h2>
+          <h2 className='mb-3'>Welcome to your workplace, {userName}!</h2>
 
-              <button
-                className='btn btn-primary m-1'
-                style={{ width: '100px' }}
-                onClick={workAppOnClick}
-              >
-                Work App
-              </button>
-              <button
-                className='btn btn-success m-1'
-                style={{ width: '100px' }}
-                onClick={relaxOnClick}
-              >
-                Relax App
-              </button>
-              <button
-                className='btn btn-warning m-1'
-                style={{ width: '100px' }}
-                onClick={emailOnClick}
-              >
-                Email App
-              </button>
-            </div>
-            <div className='col-4'>
-              <div className='card'>
-                <div className='card-header'>
-                  <h3>Employee Info</h3>
-                </div>
-                <div className='card-body'>
-                  <h5>
-                    <strong>User Name: </strong>{' '}
-                    {userName === 'E01' && 'Chengjie Huang'}
-                  </h5>
-                  <h5>
-                    <strong>User Type: </strong> {userType}
-                  </h5>
-                  <h5>
-                    <strong>Story Completed:</strong> {workDone}
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+            onClick={workAppOnClick}
+          >
+            <i
+              class='fas fa-calculator fa-5x  mb-2'
+              style={{ color: '#003300' }}
+            />
+            <p>Work</p>
+          </button>
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+            onClick={relaxOnClick}
+          >
+            <i class='fas fa-cat fa-5x  mb-2' style={{ color: '#ffcc00' }} />
+            <p> Relax </p>
+          </button>
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+            onClick={emailOnClick}
+          >
+            <i
+              class='fas fa-envelope fa-5x  mb-2'
+              style={{ color: '#0099ff' }}
+            />
+
+            <p>Email</p>
+          </button>
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+          >
+            <i class='fas fa-cogs fa-5x  mb-2' style={{ color: '#808080' }} />
+            <p>Settings</p>
+          </button>
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+          >
+            <i class='fab fa-skype fa-5x  mb-2' style={{ color: '#4db8ff' }} />
+            <p>Skype</p>
+          </button>
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+          >
+            <i
+              class='fas fa-file-word fa-5x  mb-2'
+              style={{ color: '#0059b3' }}
+            />
+            <p>Word</p>
+          </button>
+
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+          >
+            <i
+              class='fas fa-file-excel fa-5x  mb-2'
+              style={{ color: '#00802b' }}
+            />
+            <p>Excel</p>
+          </button>
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+          >
+            <i
+              class='fas fa-file-powerpoint fa-5x  mb-2'
+              style={{ color: '#e65c00' }}
+            />
+            <p>Powerpoint</p>
+          </button>
+
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+          >
+            <i
+              class='fas fa-photo-video fa-5x  mb-2'
+              style={{ color: '#1a1a1a' }}
+            />
+            <p>Photos</p>
+          </button>
+          <button
+            className='btn btn-outline-none m-5'
+            style={{ width: '100px' }}
+          >
+            <i class='fab fa-safari fa-5x  mb-2' style={{ color: '#1aa3ff' }} />
+            <p>Safari</p>
+          </button>
+          {userName === 'A01' && (
+            <button
+              className='btn btn-outline-none m-5'
+              style={{ width: '100px' }}
+              onClick={adminOnClick}
+            >
+              <i
+                class='fas fa-users-cog fa-5x  mb-2'
+                style={{ color: '#660000' }}
+              />
+              <p>Admin Board</p>
+            </button>
+          )}
         </div>
       </div>
     </div>
